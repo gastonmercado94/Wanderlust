@@ -1,0 +1,52 @@
+.bfont {
+    font-family: "Poppins", sans-serif;
+    color: lightskyblue;
+}
+
+.pfont {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+}
+
+.btn-link {
+    font-weight: 300;
+    color: lightskyblue !important;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+}
+
+.card-header {
+    background-color: black;
+}
+
+.card {
+    border: none;
+    background-color: black;
+}
+
+.btn:focus {
+    text-decoration: none;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.centrado {
+    margin: 5% 8% 3% 8% !important;
+}
+
+.btn {
+    margin-top: 2%;
+}
