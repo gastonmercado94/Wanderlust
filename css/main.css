@@ -298,7 +298,7 @@ header {
   width: 100vw;
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 15vh 30vh 55vh;
+  grid-template-rows: 15vh 60vh 25vh;
   grid-template-areas: "menu" "titulo" "subtitulo";
   height: 100vh;
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/stars1.jpg);
@@ -325,9 +325,22 @@ header .navbar .navbar__menu .navbar__menuItem a {
   font-size: 23px;
   transition: color 0.5s;
   white-space: nowrap;
+  font-weight: 300;
 }
 header .navbar .navbar__menu .navbar__menuItem a:hover {
   color: lightskyblue;
+}
+header .logos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .logos img {
+  width: 350px;
 }
 header h1 {
   -ms-grid-row: 2;

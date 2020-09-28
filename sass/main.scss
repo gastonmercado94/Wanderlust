@@ -11,7 +11,7 @@ header {
     width: 100vw;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 15vh 30vh 55vh;
+    grid-template-rows: 15vh 60vh 25vh;
     grid-template-areas:
         "menu"
         "titulo"
@@ -40,6 +40,7 @@ header {
                     font-size: 23px;
                     transition: color 0.5s;
                     white-space: nowrap;
+                    font-weight: 300;
 
                     &:hover {
                         color: $sky;
@@ -49,6 +50,19 @@ header {
             }
         }
     }
+
+    .logos {
+        grid-area: titulo;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 350px;
+        }
+    }
+
 
     h1 {
         grid-area: titulo;

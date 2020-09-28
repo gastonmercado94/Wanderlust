@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="body">
@@ -19,7 +20,7 @@
 
         <nav class="navbar">
 
-            <ul class="navbar__menu">
+            <ul class="navbar__menu wow animate__animated animate__fadeIn animate__slower">
                 <li class="navbar__menuItem"><a href="index.html">Home</a></li>
                 <li class="navbar__menuItem"><a href="cities.html">Cities</a></li>
                 <li class="navbar__menuItem"><a href="nature.html">Nature</a></li>
@@ -27,9 +28,10 @@
                 <li class="navbar__menuItem"><a href="contacto.html">Contact</a></li>
             </ul>
         </nav>
-        <h1 class="header__title">Wanderlust</h1>
-        <h2 class="header__subtitle">Explore once.
-            Explore always.</h2>
+
+        <div class="logos"><img src="img/logo2.png"
+                class="imagenlogo  wow animate__animated animate__fadeIn animate__slow"></div>
+
 
     </header>
 
@@ -49,7 +51,7 @@
             <h4 class="index__nature__title">Nature</h4>
             <p class="index__nature__text">Exploring the nature. Feeling peace and calm in the beach, to the adrenaline
                 of a hike
-                through the mountains. Here you'll find our experiences, photos and commentaries of some of the greates
+                through the mountains. Here you'll find our experiences, photos and commentaries of some of the greatest
                 nature places on earth. Either you want to relax, explore or just admire some of the greatest nature
                 wonders of earth.
             </p>
@@ -73,7 +75,7 @@
 
 
     <section class="prefooter">
-        <h2 class="prefooter__title">"Jobs fills your pocket, but adventures fill your soul"</h2>
+        <h2 class="prefooter__title">"Jobs fill your pocket, but adventures fill your soul"</h2>
     </section>
 
     <footer>
@@ -103,7 +105,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

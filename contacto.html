@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="body">
@@ -19,7 +20,7 @@
 
         <nav class="navbar">
 
-            <ul class="navbar__menu">
+            <ul class="navbar__menu  wow animate__animated animate__fadeIn animate__slower">
                 <li class="navbar__menuItem"><a href="index.html">Home</a></li>
                 <li class="navbar__menuItem"><a href="cities.html">Cities</a></li>
                 <li class="navbar__menuItem"><a href="nature.html">Nature</a></li>
@@ -27,14 +28,13 @@
                 <li class="navbar__menuItem"><a href="contacto.html">Contact</a></li>
             </ul>
         </nav>
-        <h1 class="header__title">Get in touch!</h1>
-        <h2 class="header__subtitle">We'd love to hear from you</h2>
+        <h1 class="header__title wow animate__animated animate__fadeIn animate__slow">Get in touch!</h1>
 
     </header>
 
     <section class="center">
         <section class="contact__form">
-            <div class="section__intro">
+            <div class="section__intro wow animate__animated animate__fadeInLeft animate__slow">
                 <h3 class="section__title">Let us know what's on your mind!</h3>
                 <p class="section__par">Have any questions, comments, or just want to say hi? We’d love to hear from
                     you! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur laboriosam incidunt
@@ -49,23 +49,31 @@
                 <form action="" class="form1">
 
                     <div>
-                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="name" placeholder="Name"
+                            class="wow animate__animated animate__fadeInRight animate__slow" data-wow-delay="0s">
                     </div>
 
                     <div>
-                        <input type="text" name="surname" placeholder="Surname">
+                        <input type="text" name="surname" placeholder="Surname"
+                            class="wow animate__animated animate__fadeInRight animate__slow" data-wow-delay="0.1s">
                     </div>
 
                     <div>
-                        <input type="email" name="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email"
+                            class="wow animate__animated animate__fadeInRight animate__slow" data-wow-delay="0.2s">
                     </div>
 
                     <div>
-                        <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Leave your message"></textarea>
+                        <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Leave your message"
+                            class="wow animate__animated animate__fadeInRight animate__slow"
+                            data-wow-delay="0.3s"></textarea>
                     </div>
 
                     <div class="botones">
-                        <input type="submit" value="Send"><input type="reset" value="Clear">
+                        <input type="submit" value="Send"
+                            class="wow animate__animated animate__fadeInRight animate__slow"
+                            data-wow-delay="0.8s"><input type="reset" value="Clear"
+                            class="wow animate__animated animate__fadeInRight animate__slow" data-wow-delay="0.4s">
                     </div>
 
                 </form>
@@ -74,7 +82,7 @@
     </section>
 
     <section class="prefooter">
-        <h2 class="prefooter__title">"Jobs fills your pocket, but adventures fill your soul"</h2>
+        <h2 class="prefooter__title">"Jobs fill your pocket, but adventures fill your soul"</h2>
     </section>
 
     <footer>
@@ -104,7 +112,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <script src="js/wow.min.js"></script>
 
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
