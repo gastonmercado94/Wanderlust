@@ -22,9 +22,17 @@ header {
     background-image: $gradient,
         url(../img/stars1.jpg);
 
+    .open {
+        display: none;
+    }
+
     .navbar {
         grid-area: menu;
         margin-right: 0 !important;
+
+        .close {
+            display: none;
+        }
 
         .navbar__menu {
             width: 100vw;

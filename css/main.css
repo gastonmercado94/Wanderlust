@@ -303,11 +303,17 @@ header {
   height: 100vh;
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/stars1.jpg);
 }
+header .open {
+  display: none;
+}
 header .navbar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: menu;
   margin-right: 0 !important;
+}
+header .navbar .close {
+  display: none;
 }
 header .navbar .navbar__menu {
   width: 100vw;
@@ -585,10 +591,59 @@ body {
     overflow-x: hidden;
   }
 
+  header .navbar {
+    top: 0;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    transition: left 0.5s;
+  }
+  header .navbar .close {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  header .navbar .close img {
+    width: 40px;
+  }
+  header .navbar .navbar__menu {
+    height: 70%;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navbar .navbar__menu .navbar__menuItem {
+    height: 15%;
+    width: 100%;
+  }
   header .navbar .navbar__menu .navbar__menuItem a {
-    font-size: 12px;
+    font-size: 30px;
+    width: 100%;
+  }
+  header .navbar .navbar__menu .navbar__menuItem .div__tips {
+    margin-left: 0 !important;
+  }
+  header .open {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  header .open img {
+    width: 40px;
   }
 
+  #nav:target {
+    left: 0;
+  }
+
+  /*                                   CAMBIOS                                          */
   .div__tips {
     margin-left: -15% !important;
   }

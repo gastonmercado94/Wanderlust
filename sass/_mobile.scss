@@ -10,9 +10,79 @@
         overflow-x: hidden;
     }
 
-    header .navbar .navbar__menu .navbar__menuItem a {
-        font-size: 12px;
+    header {
+
+        .navbar {
+            top: 0;
+            left: -100%;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1;
+            transition: left 0.5s;
+
+            .close {
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+
+                img {
+                    width: 40px;
+                }
+            }
+
+            .navbar__menu {
+                height: 70%;
+                margin-top: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .navbar__menuItem {
+                    height: 15%;
+                    width: 100%;
+
+                    a {
+                        font-size: 30px;
+                        width: 100%;
+                    }
+
+                    .div__tips {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+
+        .open {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+
     }
+
+    #nav:target {
+        left: 0;
+    }
+
+
+    /*                                   CAMBIOS                                          */
+
+
+
+
+
+
 
     .div__tips {
         margin-left: -15% !important;
@@ -279,12 +349,6 @@
                     width: 100%;
                     height: 200px;
                 }
-
-
-
-
-
-
             }
         }
     }
