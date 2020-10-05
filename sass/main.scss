@@ -22,6 +22,7 @@ header {
     background-image: $gradient,
         url(../img/stars1.jpg);
 
+
     .open {
         display: none;
     }
@@ -38,6 +39,10 @@ header {
             width: 100vw;
 
             @include flex(flex, row, space-around, center);
+
+            .hiddenlogo {
+                display: none;
+            }
 
             .navbar__menuItem {
                 width: 10%;
@@ -192,6 +197,8 @@ header {
 
 
 
+
+
 .prefooter {
     margin-top: 70px;
     height: 100vh;
@@ -265,6 +272,17 @@ footer {
         }
     }
 
+    .guide__about {
+        background-color: rgba(135, 206, 250, 0.3);
+        width: 90%;
+        margin-top: 3%;
+        border-radius: 10px;
+
+        h4 {
+            padding-bottom: 1%;
+        }
+    }
+
     .carousel {
         width: 60vw;
         margin: 0;
@@ -311,6 +329,10 @@ footer {
 
     p {
         padding: 1vh 4vw 1vh 4vw;
+
+        .highlight {
+            font-weight: bold;
+        }
     }
 }
 

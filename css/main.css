@@ -154,58 +154,68 @@ nav {
   color: lightskyblue;
 }
 
-/* NATURE */
-.bfont {
-  font-family: "Poppins", sans-serif;
-  color: lightskyblue;
+.collapse__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
-.pfont {
-  font-family: "Poppins", sans-serif;
-  background-color: black;
+.collapse__grid .collapse__a {
+  width: 30%;
+  border-radius: 20px;
+  border: solid #444 2px;
+  background-color: #444;
+  padding: 20px 0 30px 0;
+  margin: 3% 0 3% 0;
 }
-
-.container {
-  background-color: black;
+.collapse__grid .collapse__a .fullcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.btn-link {
+.collapse__grid .collapse__a .fullcard img {
+  padding: 10px 0 10px 0;
+}
+.collapse__grid .collapse__a .fullcard h2 {
+  padding: 10px 35px 10px 35px;
+  font-size: 26px;
+  text-align: center;
+  height: 80px;
+}
+.collapse__grid .collapse__a .accordion {
+  padding: 0 20px 0 20px;
+}
+.collapse__grid .collapse__a .accordion .card {
+  border: none;
+  background-color: #222;
+  border-radius: 20px;
+}
+.collapse__grid .collapse__a .accordion .card .card-header {
+  background-color: #222;
+  height: 50px;
+}
+.collapse__grid .collapse__a .accordion .card .card-header .btn-link {
   font-weight: 300;
-  color: lightskyblue !important;
-  text-align: left;
   display: flex;
   justify-content: left;
-  font-size: 30px;
+  font-size: 20px;
 }
-
-.card-header {
-  background-color: black;
+.collapse__grid .collapse__a .accordion .card .card-header .btn-link:hover {
+  color: lightskyblue;
 }
-
-.card {
-  border: none;
-  background-color: black;
+.collapse__grid .collapse__a .accordion .card .card-header .btn {
+  padding: 0;
+  border: 0;
+  line-height: 25px;
 }
-
-.btn:focus {
-  text-decoration: none;
-}
-
-.btn:hover {
-  text-decoration: none;
-}
-
-.btn:focus {
-  outline: 0;
+.collapse__grid .collapse__a .accordion .card .card-header .btn:focus {
   box-shadow: none;
 }
-
-.centrado {
-  margin: 5% 8% 3% 8% !important;
+.collapse__grid .collapse__a .accordion .card .card-header .bfont {
+  color: lightskyblue;
 }
-
-.btn {
-  margin-top: 2%;
+.collapse__grid .collapse__a .accordion .card .pfont {
+  background-color: #333;
 }
 
 form {
@@ -321,6 +331,9 @@ header .navbar .navbar__menu {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+header .navbar .navbar__menu .hiddenlogo {
+  display: none;
 }
 header .navbar .navbar__menu .navbar__menuItem {
   width: 10%;
@@ -526,6 +539,15 @@ footer .menufooter {
   border-bottom: 2px solid #FFF;
   margin: auto 30px;
 }
+.guide .guide__about {
+  background-color: rgba(135, 206, 250, 0.3);
+  width: 90%;
+  margin-top: 3%;
+  border-radius: 10px;
+}
+.guide .guide__about h4 {
+  padding-bottom: 1%;
+}
 .guide .carousel {
   width: 60vw;
   margin: 0;
@@ -566,6 +588,9 @@ footer .menufooter {
 .guide p {
   padding: 1vh 4vw 1vh 4vw;
 }
+.guide p .highlight {
+  font-weight: bold;
+}
 
 .nature__header {
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/nature1.jpg);
@@ -591,13 +616,17 @@ body {
     overflow-x: hidden;
   }
 
+  header h1 {
+    margin-top: 15%;
+    font-weight: 300;
+  }
   header .navbar {
     top: 0;
     left: -100%;
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     transition: left 0.5s;
   }
@@ -611,8 +640,8 @@ body {
     width: 40px;
   }
   header .navbar .navbar__menu {
-    height: 70%;
-    margin-top: 30%;
+    height: 90%;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -629,6 +658,10 @@ body {
   header .navbar .navbar__menu .navbar__menuItem .div__tips {
     margin-left: 0 !important;
   }
+  header .navbar .navbar__menu .hiddenlogo {
+    display: block;
+    margin-bottom: 35%;
+  }
   header .open {
     display: block;
     position: absolute;
@@ -643,7 +676,18 @@ body {
     left: 0;
   }
 
-  /*                                   CAMBIOS                                          */
+  #nav:target ~ .logos {
+    display: none;
+  }
+
+  #nav:target ~ h1 {
+    display: none;
+  }
+
+  #nav:target ~ .open {
+    display: none;
+  }
+
   .div__tips {
     margin-left: -15% !important;
   }
@@ -827,14 +871,32 @@ body {
   .cities__guides .cities__guide1 {
     grid-area: g1;
   }
+  .cities__guides .cities__guide1:hover {
+    width: 45vw;
+  }
   .cities__guides .cities__guide2 {
     grid-area: g2;
+  }
+  .cities__guides .cities__guide2:hover {
+    width: 45vw;
   }
   .cities__guides .cities__guide3 {
     grid-area: g3;
   }
+  .cities__guides .cities__guide3:hover {
+    width: 45vw;
+  }
   .cities__guides .cities__guide4 {
     grid-area: g4;
+  }
+  .cities__guides .cities__guide4:hover {
+    width: 45vw;
+  }
+  .cities__guides .cities__guide5:hover,
+.cities__guides .cities__guide6:hover,
+.cities__guides .cities__guide7:hover,
+.cities__guides .cities__guide8:hover {
+    width: 45vw;
   }
 
   .guide {
@@ -855,7 +917,7 @@ body {
   .guide .guide__title:before, .guide .guide__title:after {
     content: "";
     flex: 1 1;
-    border-bottom: 1.7px solid #FFF;
+    border-bottom: 1.7px solid #fff;
     margin: auto 10px;
   }
   .guide .carousel {
@@ -877,13 +939,13 @@ body {
   .guide .guide__subtitle:before {
     content: "";
     flex: 1 1;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid #fff;
     margin: auto 15px auto 30px;
   }
   .guide .guide__subtitle:after {
     content: "";
     flex: 1 1;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid #fff;
     margin: auto 30px auto 15px;
   }
   .guide p {
@@ -931,6 +993,19 @@ body {
   .center .contact__form .section__form textarea {
     width: 100%;
     height: 200px;
+  }
+
+  .collapse__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .collapse__grid .collapse__a {
+    width: 85%;
+  }
+  .collapse__grid .collapse__a .pfont {
+    font-size: 16px;
   }
 
   footer > .navbar {
