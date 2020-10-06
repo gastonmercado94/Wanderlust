@@ -548,6 +548,27 @@ footer .menufooter {
 .guide .guide__about h4 {
   padding-bottom: 1%;
 }
+.guide .about1 {
+  background-color: rgba(200, 200, 200, 0.3);
+}
+.guide .about2 {
+  background-color: rgba(212, 175, 55, 0.3);
+}
+.guide .about4 {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+.guide .about5 {
+  background-color: rgba(127, 255, 212, 0.3);
+}
+.guide .about6 {
+  background-color: rgba(0, 255, 0, 0.15);
+}
+.guide .about7 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.guide .about8 {
+  background-color: rgba(104, 70, 39, 0.5);
+}
 .guide .carousel {
   width: 60vw;
   margin: 0;
