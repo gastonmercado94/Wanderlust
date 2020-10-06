@@ -6,6 +6,30 @@
 @import 'collapse';
 @import 'form';
 
+.nature__header {
+    @extend %imgposition;
+    background-image: $gradient,
+        url(../img/nature1.jpg);
+
+}
+
+.tips__header {
+    @extend %imgposition;
+    background-image: $gradient3,
+        url(../img/tips.jpg);
+}
+
+.contact__header {
+    @extend %imgposition;
+    background-image: $gradient,
+        url(../img/contact.jpg);
+}
+
+.cities__header {
+    @extend %imgposition;
+    background-image: $gradient,
+        url(../img/ncity1.jpg);
+}
 
 header {
     width: 100vw;
@@ -195,10 +219,6 @@ header {
     }
 }
 
-
-
-
-
 .prefooter {
     margin-top: 70px;
     height: 100vh;
@@ -236,13 +256,6 @@ footer {
     }
 }
 
-/** CITIES **/
-
-.cities__header {
-    @extend %imgposition;
-    background-image: $gradient,
-        url(../img/ncity1.jpg);
-}
 
 .guide {
     display: flex;
@@ -365,26 +378,5 @@ footer {
     }
 }
 
-
-.nature__header {
-    @extend %imgposition;
-    background-image: $gradient,
-        url(../img/nature1.jpg);
-
-}
-
-.tips__header {
-    @extend %imgposition;
-    background-image: $gradient3,
-        url(../img/tips.jpg);
-}
-
-.contact__header {
-    @extend %imgposition;
-    background-image: $gradient,
-        url(../img/contact.jpg);
-}
-
-/* MOBILE */
 
 @import 'mobile';

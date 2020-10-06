@@ -1,34 +1,30 @@
 .cities__title {
-    height: 23vh;
+    height: 15vh;
     text-align: center;
     padding-top: 70px;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 200;
-}
-
-
-.cities__guides a {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-size: cover;
-    width: 25%;
-    height: 450px;
-}
-
-.cities__guides h4 {
-    font-size: 30px;
-    padding-bottom: 20px;
-    color: white;
-    transition: color 0.8s;
 }
 
 .cities__guides {
     height: 100vh;
-    display: flex;
     @include flex(flex, row, center, center);
 
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-size: cover;
+        width: 25%;
+        height: 450px;
 
+        h4 {
+            font-size: 30px;
+            padding-bottom: 20px;
+            color: white;
+            transition: color 0.8s;
+        }
+    }
 
     .cities__guide1 {
         background-image: $gradient__guides,

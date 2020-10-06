@@ -1,10 +1,33 @@
-.contact__header, .tips__header, .nature__header, .cities__header, .prefooter, .index__cities .cities__div .index__cities__img, .index__cities, .index__nature .nature__div .index__nature__img, .index__nature, header {
+.prefooter, .index__cities .cities__div .index__cities__img, .index__cities, .index__nature .nature__div .index__nature__img, .index__nature, header, .cities__header, .contact__header, .tips__header, .nature__header {
   background-size: cover;
   background-position: center;
 }
 
 .index__cities .cities__div .index__cities__img, .index__nature .nature__div .index__nature__img {
   box-shadow: 0px 0px 19px 18px rgba(0, 0, 0, 0.75);
+}
+
+.center form textarea, .center form input[type=email], .center form input[type=text] {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: solid rgba(255, 255, 255, 0.7) 1px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.center form input[type=reset], .center form input[type=submit] {
+  background-color: rgba(0, 0, 0, 0);
+  height: 40px;
+  width: 70px;
+  border: solid white 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  border-radius: 3px;
 }
 
 * {
@@ -34,13 +57,20 @@ nav {
 }
 
 .cities__title {
-  height: 23vh;
+  height: 15vh;
   text-align: center;
   padding-top: 70px;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 200;
 }
 
+.cities__guides {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .cities__guides a {
   display: flex;
   justify-content: center;
@@ -49,21 +79,11 @@ nav {
   width: 25%;
   height: 450px;
 }
-
-.cities__guides h4 {
+.cities__guides a h4 {
   font-size: 30px;
   padding-bottom: 20px;
   color: white;
   transition: color 0.8s;
-}
-
-.cities__guides {
-  height: 100vh;
-  display: flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 .cities__guides .cities__guide1 {
   background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.5)), url(../img/london1.jpg);
@@ -218,61 +238,6 @@ nav {
   background-color: #333;
 }
 
-form {
-  grid-area: form;
-}
-
-form div {
-  margin: 0 0 20px 0;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-}
-
-form input[type=text],
-input[type=email],
-textarea {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 5px 10px 5px 10px;
-  border: solid rgba(255, 255, 255, 0.7) 1px;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  border-radius: 5px;
-}
-
-input[type=text],
-input[type=email] {
-  width: 400px;
-  height: 30px;
-}
-
-textarea {
-  width: 400px;
-  height: 250px;
-}
-
-input[type=submit],
-input[type=reset] {
-  background-color: rgba(0, 0, 0, 0);
-  height: 40px;
-  width: 70px;
-  border: solid white 1px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  color: white;
-  border-radius: 3px;
-}
-
-input[type=reset] {
-  margin-left: 20px !important;
-}
-
 .center {
   display: flex;
   flex-direction: column;
@@ -298,10 +263,44 @@ input[type=reset] {
 .center .contact__form .section__intro .section__par {
   padding-top: 20px;
   line-height: 45px;
+  text-align: justify;
 }
 .center .contact__form .section__form {
   width: 50%;
   padding: 40px;
+}
+.center form div {
+  margin-bottom: 20px;
+}
+.center form input[type=text] {
+  width: 400px;
+  height: 30px;
+}
+.center form input[type=email] {
+  width: 400px;
+  height: 30px;
+}
+.center form textarea {
+  width: 400px;
+  height: 250px;
+}
+.center form input[type=submit] {
+  margin-right: 20px;
+}
+.nature__header {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/nature1.jpg);
+}
+
+.tips__header {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), black), url(../img/tips.jpg);
+}
+
+.contact__header {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/contact.jpg);
+}
+
+.cities__header {
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/ncity1.jpg);
 }
 
 header {
@@ -510,11 +509,6 @@ footer .menufooter {
   align-items: flex-start;
 }
 
-/** CITIES **/
-.cities__header {
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/ncity1.jpg);
-}
-
 .guide {
   display: flex;
   flex-direction: column;
@@ -613,19 +607,6 @@ footer .menufooter {
   font-weight: bold;
 }
 
-.nature__header {
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/nature1.jpg);
-}
-
-.tips__header {
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), black), url(../img/tips.jpg);
-}
-
-.contact__header {
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/contact.jpg);
-}
-
-/* MOBILE */
 @media screen and (max-width: 768px) {
   * {
     padding: 0;
@@ -1079,6 +1060,7 @@ body {
     -ms-grid-column: 1;
   }
 }
+
 @media screen and (max-width: 768px) {
 
   .cities__guides .cities__guide1 {

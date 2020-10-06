@@ -1,63 +1,5 @@
-form {
-    grid-area: form;
-}
-
-form div {
-    margin: 0 0 20px 0;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-
-form input[type="text"],
-input[type="email"],
-textarea {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 5px 10px 5px 10px;
-    border: solid rgba(255, 255, 255, 0.7) 1px;
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 5px;
-}
-
-input[type="text"],
-input[type="email"] {
-    width: 400px;
-    height: 30px;
-}
-
-textarea {
-    width: 400px;
-    height: 250px;
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background-color: rgba(0, 0, 0, 0);
-    height: 40px;
-    width: 70px;
-    border: solid white 1px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: white;
-    border-radius: 3px;
-}
-
-input[type="reset"] {
-    margin-left: 20px !important;
-}
-
 .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(flex, column, center, center);
     margin-top: 5vh;
 
     .contact__form {
@@ -80,6 +22,7 @@ input[type="reset"] {
             .section__par {
                 padding-top: 20px;
                 line-height: 45px;
+                text-align: justify;
             }
         }
 
@@ -87,7 +30,39 @@ input[type="reset"] {
             width: 50%;
             padding: 40px;
         }
+    }
 
+    form {
+        div {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            @extend %form__input--style;
+            width: 400px;
+            height: 30px;
+        }
+
+        input[type="email"] {
+            @extend %form__input--style;
+            width: 400px;
+            height: 30px;
+        }
+
+        textarea {
+            @extend %form__input--style;
+            width: 400px;
+            height: 250px;
+        }
+
+        input[type="submit"] {
+            @extend %form__button--style;
+            margin-right: 20px;
+        }
+
+        input[type="reset"] {
+            @extend %form__button--style;
+        }
 
     }
 }

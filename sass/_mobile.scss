@@ -385,10 +385,7 @@
   }
 
   .collapse__grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(flex, column, center, center);
 
     .collapse__a {
       width: 85%;
