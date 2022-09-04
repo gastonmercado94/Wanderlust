@@ -1,4 +1,4 @@
-# Wanderlust - Travel Experience
+# WanderEast - Travel Experience
 https://gastonmercado94.github.io/Wanderlust/
 
 Aquí se encuentra el proyecto final que realicé para el curso de desarrollo web front end en Coderhouse. El mismo consta de una página web de viajes
